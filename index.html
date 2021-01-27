@@ -35,7 +35,7 @@
             <div class="col-md-4">
                 <div class="withdraw status">
                     <h5>Withdraw</h5>
-                    <h2>$00</h2>
+                    <h2>$ <span id="currentWithdraw">00</span></h2>
                 </div>
             </div>
             <div class="col-md-4">
@@ -92,7 +92,7 @@
 
             
 
-            //funtion use all code UpdateSpanText
+            //funtion use all code 
 
             // //convert current value string to number
             // const currentDeposit = document.getElementById("currentDeposit").innerText;
@@ -128,10 +128,19 @@
             // // console.log(withdrawAmount);             // check for working
             // const withdrawNumber =parseFloat(withdrawAmount);
 
-            const withdrawAmount =getInputNumber(withdrawNumber);
+            const withdrawNumber = getInputNumber("withdrawAmount");
+
+            UpdateSpanText("currentWithdraw", withdrawNumber);
+            UpdateSpanText("currentBlance", -1 * withdrawNumber);
+
+            document.getElementById("withdrawAmount").value = "";
+
+
+
+
         })
 
-        function getInputNumber() {
+        function getInputNumber(id) {
             const Amount = document.getElementById(id).value;
             const AmountNumber =parseFloat(Amount);
             return AmountNumber;
