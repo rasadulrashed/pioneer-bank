@@ -1,3 +1,30 @@
 body{
     padding: 100px;
 }
+.submit_area{
+    margin-top: 50px;
+    padding: 40px;
+    border-radius: 10px;
+    /* first value x second velu y thard value koto pixel borabor shadow chorabe fourth color */
+    box-shadow: 5px 5px 10px gray; 
+    
+}
+#transaction_area{
+    display: none;
+}
+
+.status{
+    margin: 0px 20px;
+    color:white;
+    padding: 20px;
+    border-radius: 10px;
+}
+.deposit{
+    background-color: slateblue;
+}
+.withdraw{
+    background-color:lightsalmon;
+}
+.blance{
+    background-color: orange;
+}
